@@ -22,6 +22,7 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   emoticons = load_library(file_path)
+<<<<<<< HEAD
   output = "Sorry, that emoticon was not found" 
   emoji = emoticons.each do |key, values|
       if values[:english] == emoticon
@@ -29,10 +30,18 @@ def get_japanese_emoticon(file_path, emoticon)
       end
   end
   output
+=======
+  emoji = emoticons.each do |key, values|
+      if values[:english] == emoticon
+        return values[:japanese]
+      end
+  end
+>>>>>>> 4422261f59a9bf1907c13a0054f24f5aa3e41f4e
 end
 
 def get_english_meaning(file_path, emoticon)
   emoticons = load_library(file_path)
+<<<<<<< HEAD
   output = "Sorry, that emoticon was not found"
   emoji = emoticons.each do |emotions, values|
     if values[:japanese] == emoticon
@@ -40,4 +49,13 @@ def get_english_meaning(file_path, emoticon)
     end
   end
   p output
+=======
+  emoji = emoticons.each do |emotions, values|
+    if values[:japanese] == emoticon
+      return emotions
+    else
+      return 
+    end
+  end
+>>>>>>> 4422261f59a9bf1907c13a0054f24f5aa3e41f4e
 end
